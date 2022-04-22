@@ -1,0 +1,15 @@
+[
+    {
+        "Usuario":"primero",
+        "Password":"123"
+    },
+    {
+        "Usuario":"segundo",
+        "Password":"123"
+    },
+    {
+        "Usuario":"tercero",
+        "Password":123
+    }
+
+]
