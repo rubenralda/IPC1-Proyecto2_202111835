@@ -1,104 +1,104 @@
 [
     {
-        "Numero":1,
+        "Numero":132,
         "Nombre":"bulbasur",
         "Tipo":"Planta",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/132.png",
         "Ataque":"Latigo Cepa"
     },
     {
-        "Numero":2,
+        "Numero":495,
         "Nombre":"Snivy",
         "Tipo":"Planta",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/495.png",
         "Ataque":"slam"
     },
     {
-        "Numero":3,
+        "Numero":585,
         "Nombre":"Deerling",
         "Tipo":"Planta",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/585.png",
         "Ataque":"substitute"
     },
     {
-        "Numero":4,
+        "Numero":591,
         "Nombre":"Amoonguss",
         "Tipo":"Planta",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/591.png",
         "Ataque":"solar-beam"
     },
     {
-        "Numero":5,
+        "Numero":640,
         "Nombre":"Virizion",
         "Tipo":"Planta",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/640.png",
         "Ataque":"toxic"
     },
     {
-        "Numero":6,
+        "Numero":554,
         "Nombre":"Darumaka",
         "Tipo":"Fuego",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/554.png",
         "Ataque":"fire-punch"
     },
     {
-        "Numero":7,
+        "Numero":637,
         "Nombre":"Volcarona",
         "Tipo":"Fuego",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/637.png",
         "Ataque":"flamethrower"
     },
     {
-        "Numero":8,
+        "Numero":485,
         "Nombre":"Heatran",
         "Tipo":"Fuego",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/485.png",
         "Ataque":"ancient-power"
     },
     {
-        "Numero":9,
+        "Numero":4,
         "Nombre":"Charmander",
         "Tipo":"Fuego",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/4.png",
         "Ataque":"fire-blast"
     },
     {
-        "Numero":10,
+        "Numero":500,
         "Nombre":"Emboar",
         "Tipo":"Fuego",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/500.png",
         "Ataque":"sunny-day"
     },
     {
-        "Numero":11,
+        "Numero":503,
         "Nombre":"Samurott",
         "Tipo":"Agua",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/503.png",
         "Ataque":"Surf"
     },
     {
-        "Numero":12,
+        "Numero":55,
         "Nombre":"Golduck",
         "Tipo":"Agua",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/55.png",
         "Ataque":"ice-punch"
     },
     {
-        "Numero":13,
+        "Numero":279,
         "Nombre":"Pelipper",
         "Tipo":"Agua",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/279.png",
         "Ataque":"fly"
     },
     {
-        "Numero":14,
+        "Numero":131,
         "Nombre":"Lapras",
         "Tipo":"Agua",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/131.png",
         "Ataque":"headbutt"
     },
     {
-        "Numero":15,
+        "Numero":183,
         "Nombre":"Marill",
         "Tipo":"Agua",
         "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/183.png",

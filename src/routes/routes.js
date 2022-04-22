@@ -4,7 +4,6 @@ const router = Router();
 //inicio sesion
 router.post('/',(req,res)=>{
     let usu = require('./usuarios.json');
-    console.log(req.body);
     var nombre = req.body.nombre;
     var contra= req.body.contra;
     var respuesta = {
@@ -29,25 +28,42 @@ router.get('/pokedex',(req,res)=>{
 //obtener por numero
 router.post('/obnumero',(req,res)=>{
     let pokedex = require('./pokedex.json');
-    
-    res.send(pokedex);
+    var numero=req.body.dato;
+    var respuesta={};
+    for (let index = 0; index < pokedex.length; index++) {
+        if (pokedex[index].Numero == numero){
+            respuesta=pokedex[index];
+        } 
+    }
+    res.send(respuesta);
 });
 
 //obtener por nombre
-router.get('/obnombre',(req,res)=>{
+router.post('/obnombre',(req,res)=>{
     let pokedex = require('./pokedex.json');
-    var nombre = 'bulbasu'
-    if (pokedex[0].Nombre == nombre){
-        res.send(pokedex);
-    } else {
-        res.send({Mensaje:"Error"});
+    var nombre=req.body.dato;
+    var respuesta={};
+    for (let index = 0; index < pokedex.length; index++) {
+        if (pokedex[index].Nombre == nombre){
+            respuesta=pokedex[index];
+        } 
     }
+    res.send(respuesta);
 });
 
 //obtener por tipo
-router.post('/obnumero',(req,res)=>{
+router.post('/obtipo',(req,res)=>{
     let pokedex = require('./pokedex.json');
-    res.send(pokedex);
+    var tipo=req.body.dato;
+    var respuesta=[{}];
+    var x=0;
+    for (let index = 0; index < pokedex.length; index++) {
+        if (pokedex[index].Tipo == tipo){
+            respuesta[x]=pokedex[index];
+            x++;
+        } 
+    }
+    res.send(respuesta);
 });
 
 module.exports = router;
