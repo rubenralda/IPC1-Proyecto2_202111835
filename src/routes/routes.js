@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const router = Router();
-
+const path= require('path');
 //inicio sesion
-router.post('/',(req,res)=>{
+router.post('/iniciarsesion',(req,res)=>{
     let usu = require('./usuarios.json');
     var nombre = req.body.nombre;
     var contra= req.body.contra;
@@ -20,7 +20,7 @@ router.post('/',(req,res)=>{
 });
 
 //obtener pokemons
-router.get('/pokedex',(req,res)=>{
+router.get('/obpokemo',(req,res)=>{
     let pokedex= require('./pokedex.json');
     res.send(pokedex);
 });
@@ -66,4 +66,16 @@ router.post('/obtipo',(req,res)=>{
     res.send(respuesta);
 });
 
+router.get('/',(req,res)=>{
+    res.sendFile(path.join(require('path').dirname(require.main.filename),'vistas/index.html'));
+});
+router.get('/JS/iniciarsesion.js',(req,res)=>{
+    res.sendFile(path.join(require('path').dirname(require.main.filename),'vistas/JS/iniciarsesion.js'));
+});
+router.get('/home.html',(req,res)=>{
+    res.sendFile(path.join(require('path').dirname(require.main.filename),'vistas/home.html'));
+});
+router.get('/filtro.js',(req,res)=>{
+    res.sendFile(path.join(require('path').dirname(require.main.filename),'vistas/JS/filtro.js'));
+});
 module.exports = router;

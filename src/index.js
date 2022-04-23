@@ -8,6 +8,7 @@ const app = express();
 //configuraciones
 app.set('port',3000);
 
+
 // usando morgan para middlewares
 app.use(morgan('dev')); // para poder visualizar los estados de nuestro servidor
 app.use(express.json()); // para poder manjar los json
