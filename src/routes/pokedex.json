@@ -1,9 +1,9 @@
 [
     {
-        "Numero":132,
+        "Numero":1,
         "Nombre":"bulbasur",
         "Tipo":"Planta",
-        "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/132.png",
+        "Imagen":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
         "Ataque":"Latigo Cepa"
     },
     {

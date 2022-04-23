@@ -29,10 +29,12 @@ router.get('/obpokemo',(req,res)=>{
 router.post('/obnumero',(req,res)=>{
     let pokedex = require('./pokedex.json');
     var numero=req.body.dato;
-    var respuesta={};
+    var respuesta=[{}];
+    var x=0;
     for (let index = 0; index < pokedex.length; index++) {
         if (pokedex[index].Numero == numero){
-            respuesta=pokedex[index];
+            respuesta[x]=pokedex[index];
+            x++;
         } 
     }
     res.send(respuesta);
@@ -42,10 +44,12 @@ router.post('/obnumero',(req,res)=>{
 router.post('/obnombre',(req,res)=>{
     let pokedex = require('./pokedex.json');
     var nombre=req.body.dato;
-    var respuesta={};
+    var respuesta=[{}];
+    var x=0;
     for (let index = 0; index < pokedex.length; index++) {
         if (pokedex[index].Nombre == nombre){
-            respuesta=pokedex[index];
+            respuesta[x]=pokedex[index];
+            x++;
         } 
     }
     res.send(respuesta);
@@ -75,7 +79,10 @@ router.get('/JS/iniciarsesion.js',(req,res)=>{
 router.get('/home.html',(req,res)=>{
     res.sendFile(path.join(require('path').dirname(require.main.filename),'vistas/home.html'));
 });
-router.get('/filtro.js',(req,res)=>{
+router.get('/JS/filtro.js',(req,res)=>{
     res.sendFile(path.join(require('path').dirname(require.main.filename),'vistas/JS/filtro.js'));
+});
+router.get('/css/style.css',(req,res)=>{
+    res.sendFile(path.join(require('path').dirname(require.main.filename),'vistas/css/style.css'));
 });
 module.exports = router;
