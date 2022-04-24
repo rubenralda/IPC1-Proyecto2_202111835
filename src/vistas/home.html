@@ -15,7 +15,8 @@
             <div class="card bg-dark text-white" style="border-radius: 1rem;">
                 <div class="card-body p-4 text-center">
                     <div class="mb-md-5 mt-md-4 pb-3">
-                        <h2 class="fw-bold mb-2 text-uppercase">Pokédex</h2>
+                        <h1 class="fw-bold mb-2 text-uppercase">Pokédex</h1>
+                        <h2 class="fw-bold mb-2 text-uppercase" id="nombre"></h2>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Buscador</span>
@@ -46,6 +47,8 @@
 
     <script type="text/javascript" src="JS/filtro.js"></script>
     <script>
+        document.getElementById("nombre").innerHTML="Usuario: "+localStorage.getItem("Nombre");
+        console.log(localStorage.getItem("Nombre"))
         url = 'http://localhost:3000/obpokemo';
             fetch(url)
             .then((res)=> res.json())

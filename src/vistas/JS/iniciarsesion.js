@@ -19,8 +19,10 @@ async function login(){
         return data
     })
     if(respuestas.Mensaje == true){
-        alert('bienvenido');
+        alert('Bienvenido '+data.nombre);
+        localStorage.setItem("Nombre", document.getElementById("nombre").value);
         location.href="home.html";
+        
     } else {
         alert('El usuario y contraseña no coinciden, por favor revise sus datos');
     }
