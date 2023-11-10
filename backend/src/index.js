@@ -6,12 +6,12 @@ const cors = require('cors');
 const app = express();
 
 //configuraciones
-app.set('port',3000);
+app.set('port', 3000);
 
 
 // usando morgan para middlewares
 app.use(morgan('dev')); // para poder visualizar los estados de nuestro servidor
-app.use(express.json()); // para poder manjar los json
+app.use(express.json()); // para poder manejar los json
 app.use(cors())
 
 // router mas avanzado
@@ -19,17 +19,9 @@ app.use(require('./routes/routes.js'));
 
 // inicializando mi servidor
 // app.listen(4000) -> opcion 1 para iniciar el server
-app.listen(app.get('port'),()=>{
-    console.log('Servidor iniciado en el puerto: '+app.get('port'));
+app.listen(app.get('port'), () => {
+    console.log('Servidor iniciado en el puerto: ' + app.get('port'));
 })
-
-
-
-// correr el servidor busco la ruta del archivo index
-// node src/index.js
-
-// COMANDO PARA CORRER LA API DE EJEMPLO DEL LABORATORIO
-// con nodemon cambia a npm run dev
 
 // comando utilizados
 // npm install express

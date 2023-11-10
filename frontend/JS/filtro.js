@@ -1,58 +1,64 @@
-function buscar(){
-    var opcion=document.getElementById("opcion").value;
-    let url="";
+let url = "http://localhost:3000";
+
+document.addEventListener("DOMContentLoaded", e => {
+    e.preventDefault;
+    document.getElementById("nombre").innerHTML = "Usuario: " + localStorage.getItem("Nombre");
+    fetch(url + '/obpokemo')
+        .then((res) => res.json())
+        .then((data) => {
+            insertar(data);
+        })
+});
+
+function buscar() {
+    var opcion = document.getElementById("opcion").value;
     switch (opcion) {
         case "0"://obtener pokemon
-            url = 'http://localhost:3000/obpokemo';
-            fetch(url)
-            .then((res)=> res.json())
-            .then((data) => {
-                insertar(data);
-            })
+            fetch(url + '/obpokemo')
+                .then((res) => res.json())
+                .then((data) => {
+                    insertar(data);
+                })
             break;
         case "1"://por nombre
-            url = 'http://localhost:3000/obnombre';
-            enviar(url);
+            enviar(url + '/obnombre');
             break;
         case "2"://por numero
-            url = 'http://localhost:3000/obnumero';
-            enviar(url);
+            enviar(url + '/obnumero');
             break;
         case "3":// por tipo
-            url = 'http://localhost:3000/obtipo';
-            enviar(url);
-            break;        
+            enviar(url + '/obtipo');
+            break;
         default:
             alert("Escoje una opcion");
             break;
     }
 }
 async function enviar(url) {
-    // creando un json
     var data = {
         dato: document.getElementById("dato").value
     }
-    const respuestas = await fetch(url,{
-        method: 'POST', // or 'PUT'
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers:{
-        'Content-Type': 'application/json'
+    const respuestas = await fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
         }
     })
-    .then((res)=> res.json())
-    .then((data) => {
-        return data
-    })
-    insertar(respuestas);    
+        .then((res) => res.json())
+        .then((data) => {
+            return data
+        })
+    insertar(respuestas);
 }
 
 function insertar(respuesta) {
     let contenedor = document.getElementById('contenedor');
-    contenedor.innerHTML="";
-    if (respuesta[0].Nombre!= undefined) {
+    contenedor.innerHTML = "";
+    if (respuesta.length > 0) {
         for (let index = 0; index < respuesta.length; index++) {
-            contenedor.innerHTML += 
-            `<div class="col-auto">
+            contenedor.innerHTML +=
+                `<div class="col-auto">
                 <div class="card" style="width: 18rem;" >
                     <img class="card-img-top" src="${respuesta[index].Imagen}" alt="Card image cap">
                     <div class="card-body" id="${index}">
@@ -74,12 +80,12 @@ function insertar(respuesta) {
                 case "Planta":
                     document.getElementById(index).style.backgroundColor = '#90ee90';
                     break;
-            default:
-                break;
+                default:
+                    break;
             }
         }
-        
-    }else{
+
+    } else {
         alert("El pokemon no existe");
     }
 }
